@@ -9,14 +9,20 @@ cat > labs/day-01/README.md <<'EOF'
 - Generate a system information report.
 
 ## Commands Practised
-To be updated as the lab is completed.
+whoami, pwd, hostname, uname, cat, mkdir, cd, touch,
+echo, cp, mv, rm, ls, df, free, ps, head.
 
 ## Practical Exercises
-To be updated as the exercises are completed.
+created and managed files and generated a system report.
 
 ## What I Learned
-Add your key takeaways here.
+Learned how we can create folder,files.
+learned how to rename or copy a file 
+learn how to check memory utilization
+learned how to delete files
+Learned how to check running processes
+Learned how to check disk usage
 
 ## Troubleshooting
-Document any errors and how you resolved them.
+there was nothing to troubleshoot
 EOF
