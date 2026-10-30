@@ -22,6 +22,7 @@
 ## Real-World DevOps Application
 - Git helps teams track infrastructure and application code.
 - Commits record snapshots of project changes..
+- Commits provide an auditable history of code changes.
 - Branches allow engineers to develop features separately.
 - Pull requests help teams review changes before merging.
 
