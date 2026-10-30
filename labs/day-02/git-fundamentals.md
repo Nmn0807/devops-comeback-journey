@@ -23,4 +23,9 @@
 - Git helps teams track infrastructure and application code.
 - Commits provide a history of changes.
 - Branches allow engineers to develop features separately.
-- Pull requests help teams review changes before merging..
+- Pull requests help teams review changes before merging.
+
+## Branching Practice
+- Created feature/git-practice.
+- Practised making changes on a separate branch.
+- Preparing to merge the feature into main..
