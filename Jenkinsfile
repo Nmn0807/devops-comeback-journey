@@ -2,6 +2,10 @@
 pipeline {
     agent any
 
+environment {
+    APP_NAME = 'my-java-app'
+    APP_ENV = 'staging'
+}
     stages {
 
         stage('Build') {
@@ -21,6 +25,8 @@ stage('Environment Info') {
 
         sh 'echo "Workspace contents:"'
         sh 'ls -la'
+echo "Application: ${env.APP_NAME}"
+echo "Deployment Environment: ${env.APP_ENV}"
     }
 }
         stage('Test') {
