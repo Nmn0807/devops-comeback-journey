@@ -1,10 +1,15 @@
 
 pipeline {
     agent any
-
+parameters {
+    choice(
+        name: 'DEPLOY_ENV',
+        choices: ['dev', 'staging', 'production'],
+        description: 'Select the deployment environment'
+    )
+}
 environment {
     APP_NAME = 'my-java-app'
-    APP_ENV = 'staging'
 }
     stages {
 
@@ -26,7 +31,7 @@ stage('Environment Info') {
         sh 'echo "Workspace contents:"'
         sh 'ls -la'
 echo "Application: ${env.APP_NAME}"
-echo "Deployment Environment: ${env.APP_ENV}"
+echo "Selected Deployment Environment: ${params.DEPLOY_ENV}"
     }
 }
         stage('Test') {
