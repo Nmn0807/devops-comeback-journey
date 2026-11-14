@@ -42,12 +42,18 @@ echo "Selected Deployment Environment: ${params.DEPLOY_ENV}"
         }
 
         stage('Deploy') {
-            steps {
-                echo 'Deploying the application...'
-                sh 'echo Application deployed successfully!'
-            }
+    when {
+        expression {
+            params.DEPLOY_ENV == 'production'
         }
     }
+
+    steps {
+        echo "Deploying to ${params.DEPLOY_ENV}..."
+        sh 'echo Application deployed successfully!'
+    }
+}
+    
     post {
         success {
             echo 'Pipeline completed successfully!'
