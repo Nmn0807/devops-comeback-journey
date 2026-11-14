@@ -10,7 +10,19 @@ pipeline {
                 sh 'echo Application build completed!'
             }
         }
+stage('Environment Info') {
+    steps {
+        echo "Build Number: ${env.BUILD_NUMBER}"
+        echo "Job Name: ${env.JOB_NAME}"
+        echo "Workspace: ${env.WORKSPACE}"
 
+        sh 'echo "Current directory:"'
+        sh 'pwd'
+
+        sh 'echo "Workspace contents:"'
+        sh 'ls -la'
+    }
+}
         stage('Test') {
             steps {
                 echo 'Running application tests...'
